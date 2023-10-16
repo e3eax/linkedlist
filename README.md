@@ -84,7 +84,7 @@ LinkedList<int> myList(myVector);
 
 ### Booleans
 
-```
+```cpp
 #include "LinkedList.h"
 
 LinkedList<bool> boolList;
