@@ -4,21 +4,12 @@
 
 This is an implementation of a generic linked list class in C++. It provides basic operations for manipulating a linked list, making it easy to use and efficient for a wide range of data types.
 
-## Installation
-
-Include the linked list class in your project and create an instance of it:
-
-```cpp
-#include "LinkedList.h"
-
-LinkedList<int> myList;
-```
-
 ## Features
 
 - **Generic**: The class is templated, which means it can be used with any data type.
 - **Ease of use**: The class provides a simple and intuitive API for working with linked lists.
 - **Efficiency**: The implementation focuses on performance and memory efficiency.
+- **Vector Initialization**: The linked list class can be instantiated with a vector, and all the elements will be appended to the linked list sequentially.
 
 ## Operations
 
@@ -28,6 +19,16 @@ LinkedList<int> myList;
 - `insert`: Insert an element at a specific position in the list.
 - `delete`: Remove an element from the list.
 - `update`: Update an element in the list.
+
+## Installation
+
+Include the linked list class in your project and create an instance of it:
+
+```cpp
+#include "LinkedList.h"
+
+LinkedList<int> myList;
+```
 
 ## Usage
 
@@ -59,6 +60,18 @@ stringList.prepend("Linked List");
 stringList.traverse([](std::string value) {
     std::cout << value << std::endl;
 });
+```
+
+### Vectors
+
+You can also instantiate the linked list with a vector of elements:
+
+```cpp
+#include "LinkedList.h"
+#include <vector>
+
+std::vector<int> myVector = {1, 2, 3, 4, 5};
+LinkedList<int> myList(myVector);
 ```
 
 ### Custom Structures
