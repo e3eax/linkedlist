@@ -34,7 +34,7 @@ LinkedList<int> myList;
 
 The generic nature of the linked list class allows you to use it with various data types. Here are some examples:
 
-### Integers
+### Numbers
 
 ```cpp
 #include "LinkedList.h"
@@ -44,6 +44,14 @@ intList.append(1);
 intList.append(2);
 intList.append(3);
 intList.traverse([](int value) {
+    std::cout << value << std::endl;
+});
+
+LinkedList<double> doubleList;
+doubleList.append(1.1);
+doubleList.append(2.2);
+doubleList.append(3.3);
+doubleList.traverse([](double value) {
     std::cout << value << std::endl;
 });
 ```
@@ -72,6 +80,20 @@ You can also instantiate the linked list with a vector of elements:
 
 std::vector<int> myVector = {1, 2, 3, 4, 5};
 LinkedList<int> myList(myVector);
+```
+
+### Booleans
+
+```
+#include "LinkedList.h"
+
+LinkedList<bool> boolList;
+boolList.append(true);
+boolList.append(false);
+boolList.append(true);
+boolList.traverse([](bool value) {
+    std::cout << std::boolalpha << value << std::endl;
+});
 ```
 
 ### Custom Structures
