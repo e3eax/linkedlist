@@ -10,7 +10,7 @@ template <typename T>
 class Node {
  private:
   int key_ = 0;
-  T data_ = 0;
+  T data_ = T();
   Node* next_ = nullptr;
 
  public:
